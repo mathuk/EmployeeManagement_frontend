@@ -1,0 +1,214 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="header-icon"><i class="fa fa-users"></i></div>
+        <div class="header-title">
+            <h1>Add Employee</h1>
+            <small></small>
+        </div>
+    </section>
+
+
+    <!-- Main content -->
+    <!--profile componenent-->
+    <div class="content">
+        <!-- load messages -->
+        <!-- load custom page -->
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="panel panel-bd lobidrag">
+                    <div class="" style="padding: 0px 20px;">
+                        <div class="panel-title">
+                            <h4>Add Empolyee</h4>
+                        </div>
+                    </div>
+
+                <div class="panel-body">
+
+
+                      <form #f="ngForm" (ngSubmit)="onsubmit(f)" enctype="multipart/form-data"  accept-charset="utf-8">
+
+
+                          <!-- <input type="hidden" name="id" value="2" /> -->
+                          <div class="form-group row">
+                                <label for="firstname" class="col-sm-3 col-form-label">First Name *</label>
+                                <div class="col-sm-9">
+                                    <input ngModel name="fName" #firstName="ngModel" required class="form-control" type="text" placeholder="First Name" id="firstname"  >
+                                    <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+                                        <div *ngIf="firstName.errors.required">Field is required</div>
+                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                    <label for="lastname" class="col-sm-3 col-form-label">Last Name *</label>
+                                    <div class="col-sm-9">
+                                        <input ngModel name="lName" #lastName="ngModel" required class="form-control" type="text" placeholder="Last Name" id="lastname" >
+                                        <div class="alert alert-danger" *ngIf="lastName.touched && !lastName.valid">
+                                            <div *ngIf="lastName.errors.required">Field is required</div>
+                                         </div>
+                                    </div>
+                                </div>
+
+                            <div class="form-group row">
+                                <label for="dob" class="col-sm-3 col-form-label">Date of Birth *</label>
+                                <div class="col-sm-9">
+                                    <input ngModel name="dob" #dob="ngModel" required class="form-control" type="date" placeholder="Date of Birth" id="dob"  value="">
+                                    <div class="alert alert-danger" *ngIf="dob.touched && !dob.valid">
+                                        <div *ngIf="dob.errors.required">Field is required</div>
+                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="doe" class="col-sm-3 col-form-label">Date of Employement *</label>
+                                <div class="col-sm-9">
+                                    <input ngModel name="doe" #doe="ngModel" required class="form-control" type="date" placeholder="Date of Birth" id="doe"  value="">
+                                    <div class="alert alert-danger" *ngIf="doe.touched && !doe.valid">
+                                        <div *ngIf="doe.errors.required">Field is required</div>
+                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                    <label for="gender" class="col-sm-3 col-form-label">Gender *</label>
+                                    <div class="col-sm-9">
+                                        <select ngModel name="gender" class="">
+                                            <option id="gender" value="M">Male</option>
+                                            <option id="gender" value="F">Female</option>
+    
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                        <label for="email" class="col-sm-3 col-form-label">Email Address *</label>
+                                        <div class="col-sm-9">
+                                            <input ngModel name="email" #email="ngModel" required class="form-control" type="email" email placeholder="Email Address">
+                                            <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+                                                <div *ngIf="email.errors.required">Field is required</div>
+                                                <div *ngIf="email.errors.email">Not a valid email</div>
+                                             </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                            <label for="mobile" class="col-sm-3 col-form-label">Contact Number *</label>
+                                            <div class="col-sm-9">
+                                                <input ngModel name="mobile" #mobile="ngModel" required class="form-control" type="text" placeholder="Contact Number" id="contact-number" value="">
+                                                <div class="alert alert-danger" *ngIf="mobile.touched && !mobile.valid">
+                                                    <div *ngIf="mobile.errors.required">Field is required</div>
+                                                 </div>
+                                            </div>
+                                        </div>
+                                    <div class="form-group row">
+                                <label for="phone" class="col-sm-3 col-form-label">Phone Number </label>
+                                <div class="col-sm-9">
+                                    <input ngModel name="phone" #phone="ngModel" required class="form-control" type="text" placeholder="Phone Number" id="phone-number" value="">
+                                    <div class="alert alert-danger" *ngIf="phone.touched && !phone.valid">
+                                        <div *ngIf="phone.errors.required">Field is required</div>
+                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                    <label for="Permenent-address" class="col-sm-3 col-form-label">Permenent Address </label>
+                                    <div class="col-sm-9">
+                                        <input ngModel name="perAddress" #perAddress="ngModel" required class="form-control" type="text" placeholder="Perment Address" id="phone-number" value="">
+                                        <div class="alert alert-danger" *ngIf="perAddress.touched && !perAddress.valid">
+                                            <div *ngIf="perAddress.errors.required">Field is required</div>
+                                         </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                        <label for="current-address" class="col-sm-3 col-form-label">Current Address</label>
+                                        <div class="col-sm-9">
+                                            <input ngModel name="curAddress" #curAddress="ngModel" required class="form-control" type="text" placeholder="Current Address" id="phone-number" value="">
+                                            <div class="alert alert-danger" *ngIf="curAddress.touched && !curAddress.valid">
+                                                <div *ngIf="curAddress.errors.required">Field is required</div>
+                                             </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                            <label for="blood" class="col-sm-3 col-form-label">Blood Group</label>
+                                            <div class="col-sm-9">
+                                                <select ngModel name="blood" class="">
+                                                    <option id="a+" value="A+">A+</option>
+                                                    <option id="a-" value="A-">A-</option>
+                                                    <option id="b+" value="B+">B+</option>
+                                                    <option id="b-" value="B-">B-</option>
+                                                    <option id="ab+" value="AB+">AB+</option>
+                                                    <option id="ab-" value="AB-">AB-</option>
+                                                    <option id="o+" value="O+">O+</option>
+                                                    <option id="o-" value="O-">O-</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                                <label for="position" class="col-sm-3 col-form-label">Position</label>
+                                                <div class="col-sm-9">
+                                                    <select ngModel name="position" class="">
+                                                        <option  *ngFor="let position of positions" value="{{position.position}}">
+                                                            {{position.position}}
+                                                        </option>
+                
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                    <label for="payroll-model" class="col-sm-3 col-form-label">Payroll Model</label>
+                                                    <div class="col-sm-9">
+                                                        <select ngModel name="salaryModel" class="">
+                                                            <option  *ngFor="let salary of salaries" [ngValue]="salary">{{salary.mName}}</option>
+                                                           
+                    
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                        <label for="leave-model" class="col-sm-3 col-form-label">Leave Model</label>
+                                                        <div class="col-sm-9">
+                                                            <select ngModel name="leaveModel" class="">
+                                                                    <option  *ngFor="let leave of leaves" [ngValue]="leave">{{leave.mName}}</option>
+                                                                    
+                        
+                                                            </select>
+                                                        </div>
+                                                </div>
+
+                                                <!-- <div class="form-group row">
+                                                        <label for="image" class="col-sm-3 col-form-label">Image</label>
+                                                        <div class="col-sm-9">
+                                                            <input ngModel type="file" name="image" #image="ngModel" required id="image" aria-describedby="fileHelp">
+                                                            <div class="alert alert-danger" *ngIf="image.touched && !image.valid">
+                                                                <div *ngIf="image.errors.required">Field is required</div>
+                                                             </div>
+                                                            <small id="fileHelp" class="text-muted"></small>
+                                                        </div>
+                                                    </div> -->
+                                                    <input ngModel type="hidden" name="image" #image="ngModel"  id="image" aria-describedby="fileHelp" value="test">
+
+                          <div class="form-group text-right">
+                              <button type="submit" [disabled]="!f.valid" class="btn btn-success w-md m-b-5">Save</button>
+                              <button type="reset" class="btn btn-primary w-md m-b-5">Reset</button>
+                          </div>
+                      </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- /.content -->
+    <!--End profile component-->
+<!-- Start Page Lavel Plugins
+=====================================================================-->
+
+
+
+</div> <!-- /.content -->

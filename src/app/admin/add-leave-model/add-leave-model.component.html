@@ -1,0 +1,91 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+      <div class="header-icon"><i class="fa fa-plane"></i></div>
+      <div class="header-title">
+          <h1>Add Leave</h1>
+          <small></small>
+      </div>
+  </section>
+
+
+  <!-- Main content -->
+  <!--profile componenent-->
+  <div class="content">
+      <!-- load messages -->
+      <!-- load custom page -->
+      <div class="row">
+          <div class="col-sm-12 col-md-12">
+              <div class="panel panel-bd lobidrag">
+                  <div class="" style="padding: 0px 20px;">
+                      <div class="panel-title">
+                          <h4>Add Leave</h4>
+                      </div>
+                  </div>
+                  <div class="panel-body">
+
+
+                      <form #f="ngForm" (ngSubmit)="submit(f)" enctype="multipart/form-data"  accept-charset="utf-8">
+
+
+                          <!-- <input type="hidden" name="id" value="2" /> -->
+
+                          <div class="form-group row">
+                              <label for="mName" class="col-sm-3 col-form-label">Leave Model*</label>
+                              <div class="col-sm-9">
+                                  <input ngModel name="mName" #leaveName="ngModel" required class="form-control" type="text" placeholder="Leave Model" id="mName"  value="">
+                                  <div class="alert alert-danger" *ngIf="leaveName.touched && !leaveName.valid">
+                                     <div *ngIf="leaveName.errors.required">Field is required</div>
+                                  </div>
+                                </div>
+                              
+                          </div>
+
+                          <div class="form-group row">
+                              <label for="daysPerYear" class="col-sm-3 col-form-label">Days per Year *</label>
+                              <div class="col-sm-9">
+                                  <input ngModel name="daysPerYear" #daysPerYear="ngModel" required class="form-control" type="number" min=0 max=365 placeholder="Days per Year" id="daysPerYear" value="0">
+                                  <div class="alert alert-danger" *ngIf="daysPerYear.touched && !daysPerYear.valid">
+                                    <div *ngIf="leaveName.errors.required">Field is required</div>
+                                 </div>
+                                </div>
+                          </div>
+
+                          <div class="form-group row">
+                              <label for="daysPerMonth" class="col-sm-3 col-form-label">Days per Month *</label>
+                              <div class="col-sm-9">
+                                  <input ngModel name="daysPerMonth" #daysPerMonth="ngModel" required class="form-control" type="number" min=0 max=365 placeholder="Days per Month" id="daysPerMonth" value="0">
+                                  <div class="alert alert-danger" *ngIf="daysPerMonth.touched && !daysPerMonth.valid">
+                                        <div *ngIf="leaveName.errors.required">Field is required</div>
+                                    </div>
+                              
+                                </div>
+                          </div>
+
+
+                          <div class="form-group row">
+                              <label for="description" class="col-sm-3 col-form-label">Description</label>
+                              <div class="col-sm-9">
+                                  <textarea ngModel name="description" #description="ngModel" placeholder="Description" class="form-control" id="description"></textarea>
+                              </div>
+                          </div>
+
+                          <div class="form-group text-right">
+                              <button type="submit" [disabled]="!f.valid" class="btn btn-success w-md m-b-5">Save</button>
+                              <button type="reset" class="btn btn-primary w-md m-b-5">Reset</button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </div> <!-- /.content -->
+  <!--End profile component-->
+<!-- Start Page Lavel Plugins
+=====================================================================-->
+
+
+
+</div> <!-- /.content -->

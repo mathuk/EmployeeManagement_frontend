@@ -1,0 +1,305 @@
+/* home page calendar style css start */
+
+.cardbox {
+    border: 0;
+    min-height: 122px;
+    overflow: hidden;
+    border-radius: 4px;
+}.cardbox .panel-body {
+    min-height: 130px;
+    position: relative;
+}.refresh, .refresh2 {
+    color: #000;
+    opacity: .3;
+    font-size: 15px;
+}.refresh-container {
+    position:absolute;
+    top:0;
+    right:0;
+    background:rgba(255,255,255,0.9);
+    width:100%;
+    height:100%;
+    display: none;
+    text-align:center;
+    z-index:4;
+}
+.refresh-spinner {
+    padding: 30px;
+    opacity: 0.8;
+}
+.timer {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+.cardbox-icon {
+    font-size: 96px;
+    color: #000;
+    opacity: .25;
+    position: absolute;
+    right: -20px;
+    top: 35%;
+    overflow: hidden;
+}
+.cardbox-icon i{
+    font-size: 96px;
+}
+.card-details{
+    margin-top: 50px;
+}
+.card-details h4 {
+    font-size: 19px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0 0 5px;
+}
+
+/*background color*/
+.bg-primary{background: #2184DA;}
+.bg-success {background: #17B6A4;}
+.bg-dark {background: #3C454D;}
+.bg-warning {background: #EF6C00;}
+
+.attendence .table, .notice .table,
+.payment .table, .transaction .table{
+    margin-bottom: 0px;
+}
+/* Dyanmic calendar css*/
+
+#evencal{
+    width:100%;
+    margin: 0 auto;
+}
+#dtails{
+
+height:450px;
+max-height:600px;
+padding: 2px;
+overflow-y:scroll;
+overflow-x:hidden;
+background-color:   #F5F5F5;
+}
+
+#evencal div.calendar{
+    width:100%;
+}
+
+
+select{
+    min-width: 50px;
+}
+table.date {
+    border: 1px solid #999;
+    border-collapse: collapse;
+    font-family: 'Alegreya Sans', sans-serif;
+    width: 100%;
+}
+.date th {
+    border: 1px solid #e1e6ef;
+    text-transform: uppercase;
+    font-size: 15px;
+    text-align: center;
+    color: #000;
+    height: 3em;
+}
+.date td {
+    border: 1px solid #e1e6ef;
+    vertical-align: top;
+    width: 15.285%;
+}
+caption {
+    margin-bottom: 5px;
+    font-size: 21px;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+}
+
+
+a{
+    text-decoration:none;
+}
+
+a.prev_date{
+    float:left;
+}
+a.next_date{
+    float:right;
+}
+.view{
+ float:right;   
+}
+a.prev_date, a.next_date {
+    border: 2px solid #efefef;
+    color: #89949B;
+    background-color: #fff;
+    border-radius: 25px;
+    font-size: 14px;
+    position: relative;
+    font-weight: 500;
+}
+/*a.prev_date:after {*/
+/*    content: "\02039";*/
+/*    font-size: 200%;*/
+/*    line-height: 24px;*/
+/*}*/
+
+div.active_date_event, div.date_event,
+div.active_no_event, div.no_event{
+    cursor:pointer;
+    height: 5em;
+    padding: 5px;
+}
+
+div.active_date_event:hover, div.date_event:hover,
+div.active_no_event:hover, div.no_event:hover{
+    background-color: green;
+    color: white;
+}
+
+div.active_date_event{
+    background-color:green;
+    color:white;
+}
+
+div.active_no_event{
+    color:#fff;
+    background-color: #17B6A4;
+}
+span.date {
+    font-size: 21px;
+    font-weight: 500;
+    margin-left: 3px;
+    display: block;
+}
+span.event{
+    font-family: Arial;
+    font-size: 12px;
+    font-weight:bold;
+    text-align:center;
+    padding-top:5px;
+    display:block;
+    color:blue;
+}
+
+.weekend_sat {
+    background-color: #F3F3F3;
+}
+.weekend_sun {
+    background-color:#FF6347;
+}
+
+.require{
+    color: red;
+}
+
+.error_require{
+    background-color: #ffd2d4;
+}
+
+.spacer{
+    clear:both;
+    color:red;
+    text-align:center;
+    font-size:12px;
+    padding: 3px;
+}
+
+/*.info1, .info2, .info3, .info4, .info5, .info6, .message {*/
+/*    padding: 3px;*/
+/*    margin-bottom:10px;*/
+/*    -webkit-border-radius: 3px;*/
+/*    -moz-border-radius: 3px;*/
+/*    border-radius: 3px;*/
+/*    -moz-box-shadow: 4px 4px #dfe1d8;*/
+/*    -webkit-box-shadow: 4px 4px #dfe1d8;*/
+/*    box-shadow: 4px 4px #dfe1d8;*/
+/*}*/
+
+
+
+/*.info2 {*/
+/*    background: #ffffff url("images/user1.svg") no-repeat scroll 10px center;*/
+/*    border: 1px solid #0e7fad;*/
+/*    color: #0e7fad;*/
+/*}*/
+
+
+ .message, .info2, .info4, .info3, .info5, .info6 {
+    padding: .75rem 1.25rem; 
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.alert-primary, .message {
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+}
+ .info1 {
+    color: #464a4e;
+    background-color: #e7e8ea;
+    border-color: #dddfe2;
+}
+.alert-secondary, .info2 {
+    color: #464a4e;
+    background-color: #e7e8ea;
+    border-color: #dddfe2;
+}
+.alert-success, .info4 {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.alert-danger, .info3 {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.alert-warning, .info5 {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+.alert-info, .info6 {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+.alert-dark {
+    color: #1b1e21;
+    background-color: #d6d8d9;
+    border-color: #c6c8ca;
+}
+/* calendar style css end */
+
+
+@media (max-width: 767px) {
+    .sidebar-open .content-wrapper,
+    .sidebar-open .right-side,
+    .sidebar-open .main-footer {
+        -webkit-transform: translate(250px, 0);
+        transform: translate(250px, 0);
+    }
+}
+
+.content-wrapper,
+.right-side {
+    min-height: 100%;
+    z-index: 800;
+    background-color: #f1f3f6;
+}
+
+.main-footer {
+    background: #fff;
+    padding: 15px;
+    color: #444;
+    border-top: 1px solid #d2d6de;
+}
+

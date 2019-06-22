@@ -1,0 +1,48 @@
+
+<!-- Main content -->
+<!--profile componenent-->
+<div class="content">
+  <!-- load messages -->
+  <!-- load custom page -->
+  <div class="row">
+    <div class="col-sm-12 col-md-12">
+      <div class="panel panel-bd lobidrag">
+        <div class="" style="padding: 0px 20px;">
+          <div class="panel-title">
+            <h4>Profile Setting</h4>
+          </div>
+        </div>
+        <div class="panel-body">
+
+
+          <form  #f="ngForm" (ngSubmit)="change(f)"  enctype="multipart/form-data" method="post" accept-charset="utf-8">
+
+            <div class="form-group row">
+              <label for="current" class="col-sm-3 col-form-label">Current Password *</label>
+              <div class="col-sm-9">
+                <input name="current" ngModel class="form-control" type="password" placeholder="Current Password" id="firstname">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="new" class="col-sm-3 col-form-label">New Password *</label>
+              <div class="col-sm-9">
+                <input name="new" ngModel class="form-control" type="password" placeholder="New Password" >
+              </div>
+            </div>
+
+            <div class="form-group text-right">
+              <button type="reset" class="btn btn-primary w-md m-b-5">Reset</button>
+              <button type="submit" class="btn btn-success w-md m-b-5">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div> <!-- /.content -->
+<!--End profile component-->
+<!-- Start Page Lavel Plugins
+=====================================================================-->

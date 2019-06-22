@@ -1,0 +1,68 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+      <div class="header-icon"><i class="fa fa-plane"></i></div>
+      <div class="header-title">
+          <h1>Daily Attendance</h1>
+          <small></small>
+      </div>
+  </section>
+
+
+  <!-- Main content -->
+  <!--profile componenent-->
+  <!-- Main content -->
+  <div class="content">
+      <div class="row">
+          <!--  table area -->
+          <div class="col-sm-12">
+
+              <div class="panel panel-default thumbnail">
+
+                  <div class="panel-body table-responsive">
+                      <table width="100%" class="datatable table table-striped table-bordered table-hover">
+                          <thead>
+                          <tr>
+                              <th>No</th>
+                              <th>Date</th>
+                              <th>Attendance</th>
+                              <th>Arrival</th>
+                              <th>Departure</th>
+                              <th>Type</th>
+                              <th>Action</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr *ngFor="let attendance of attendances" class="odd gradeX">
+                              <td>1</td>
+                              <td>{{attendance.date}}</td>
+                              <td>{{attendance.attendance}}</td>
+                              <td *ngIf="attendance.attendance">{{attendance.arrival}}</td>
+                              <td *ngIf="attendance.attendance">{{attendance.departure}}</td>
+                              <td *ngIf="attendance.attendance">
+                                <span *ngIf="attendance.attType=='HF'">Half Day</span>
+                                <span *ngIf="attendance.attType=='FL'">Half Day</span>
+                              </td>
+
+                           <td class="center">
+                                  <a  routerLink="/leave-models" class="btn btn-xs btn-danger" (click)="delete(leave.lId) "><i class="fa fa-trash"></i></a>
+                              </td>
+                          </tr>
+
+                          
+                          </tbody>
+                      </table>  <!-- /.table-responsive -->
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div> <!-- /.content -->
+
+  <!--End profile component-->
+<!-- Start Page Lavel Plugins
+=====================================================================-->
+
+
+
+</div> <!-- /.content -->

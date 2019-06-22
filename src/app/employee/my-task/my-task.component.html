@@ -1,0 +1,63 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+      <div class="header-icon"><i class="fa fa-plane"></i></div>
+      <div class="header-title">
+          <h1>Tasks</h1>
+          <small></small>
+      </div>
+  </section>
+
+
+  <!-- Main content -->
+  <!--profile componenent-->
+  <!-- Main content -->
+  <div class="content">
+      <div class="row">
+          <!--  table area -->
+          <div class="col-sm-12">
+
+              <div class="panel panel-default thumbnail">
+
+                  <div class="panel-body table-responsive">
+                      <table width="100%" class="datatable table table-striped table-bordered table-hover">
+                          <thead>
+                          <tr>
+                              <th>SL No</th>
+                              <th>Description</th>
+                              <th>Dead Line</th>
+                              <th>Manager</th>
+                              <th>Action</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr *ngFor="let task of tasks" class="odd gradeX">
+                              <td>1</td>
+                              <td>{{task.description}}</td>
+                              <td>{{task.deadLine}}</td>
+                              <td>{{task.createdBy.fName}}</td>
+                              <td>{{task.description}}</td>
+
+                           <td class="center">
+                                  <a  class="btn btn-xs btn-success"><i class="fa fa-pencil"></i></a>
+                                  <a  routerLink="/leave-models" class="btn btn-xs btn-danger" (click)="delete(leave.lId) "><i class="fa fa-trash"></i></a>
+                              </td>
+                          </tr>
+
+                          
+                          </tbody>
+                      </table>  <!-- /.table-responsive -->
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div> <!-- /.content -->
+
+  <!--End profile component-->
+<!-- Start Page Lavel Plugins
+=====================================================================-->
+
+
+
+</div> <!-- /.content -->

@@ -1,0 +1,160 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="header-icon"><i class="fa fa-users"></i></div>
+        <div class="header-title">
+            <h1>Leave requests</h1>
+            <small></small>
+        </div>
+    </section>
+
+
+    <!-- Main content -->
+    <!--profile componenent-->
+    <div class="content">
+        <!-- load messages -->
+        <!-- load custom page -->
+        <div class="row">
+               <!--  table area -->
+               <div class="col-sm-12">
+
+                <div class="panel panel-default thumbnail">
+
+                    <div class="panel-body table-responsive">
+                        <table width="100%" class="datatable table table-striped table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>SL No</th>
+                                <th>Requester</th>
+                                <th>Date</th>
+                                <th>Reason</th>
+                                <th>Requested Date</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr *ngFor="let request of requests" class="odd gradeX">
+                                <td>1</td>
+                                <td>{{request.requestedBy.fName}}</td>
+                                <td>{{request.date}}</td>
+                                <td>{{request.reason}}</td>
+                                <td>{{request.requestedDate}}</td>
+                                
+                                
+
+
+                             <td class="center">
+                               <!-- Trigger the modal with a button -->
+                               <button (click)="giveReply(request)" type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal">Reply</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>  <!-- /.table-responsive -->
+                    </div>
+                </div>
+            </div>
+
+
+               <!--  table area -->
+               <div class="col-sm-12">
+
+                <div class="panel panel-default thumbnail">
+
+                    <div class="panel-body table-responsive">
+                        <table width="100%" class="datatable table table-striped table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>SL No</th>
+                                <th>Requester</th>
+                                <th>Date</th>
+                                <th>Reason</th>
+                                <th>Requested Date</th>
+                                <th>Approval</th>
+                                <th>Reply</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr *ngFor="let reply of replies" class="odd gradeX">
+                                <td>1</td>
+                                <td>{{reply.requestedBy.fName}}</td>
+                                <td>{{reply.date}}</td>
+                                <td>{{reply.reason}}</td>
+                                <td>{{reply.requestedDate}}</td>
+                                <td *ngIf="reply.approved">Approved</td>
+                                <td *ngIf="!reply.approved">Not Approved</td>
+
+                                <td>{{reply.reply}}</td>
+                                
+
+
+                             <!--<td class="center">-->
+                                    <!--<a  class="btn btn-xs btn-success"><i class="fa fa-pencil"></i></a>-->
+                                    <!--<button routerLink="/employees" class="btn btn-xs btn-danger" (click)="delete(employee.eId)"><i class="fa fa-trash"></i></button>-->
+                                <!--</td>-->
+                            </tr>
+                            </tbody>
+                        </table>  <!-- /.table-responsive -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      <!-- Modal -->
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+              <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+              <form  #f="ngForm" (ngSubmit)="onsubmit(f)" enctype="multipart/form-data"  accept-charset="utf-8">
+
+
+                <!-- <input type="hidden" name="id" value="2" /> -->
+
+                <div class="form-group row">
+                  <label for="reply" class="col-sm-3 col-form-label">Reply*</label>
+                  <div class="col-sm-9">
+                    <input ngModel name="reply" #reply="ngModel" class="form-control" type="text" required placeholder="Reply" id="notice"  >
+                    <div class="alert alert-danger" *ngIf="reply.touched && !reply.valid">
+                      <div *ngIf="reply.errors.required">Field is required</div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="form-group row">
+                  <label for="approval" class="col-sm-3 col-form-label">Approval</label>
+                  <div class="col-sm-9">
+                    <select ngModel name="approved" class="">
+                      <option  value="false">Not Approved</option>
+                      <option value="true">Approved-</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group text-right">
+                  <button type="submit" class="btn btn-success w-md m-b-5">Save</button>
+                  <button type="reset" class="btn btn-primary w-md m-b-5">Reset</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div> <!-- /.content -->
+    <!--End profile component-->
+<!-- Start Page Lavel Plugins
+=====================================================================-->
+
+
+
+</div> <!-- /.content -->

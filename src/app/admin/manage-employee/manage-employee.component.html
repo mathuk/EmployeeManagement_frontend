@@ -1,0 +1,87 @@
+ <!-- Content Wrapper. Contains page content -->
+ <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="header-icon"><i class="fa fa-users"></i></div>
+        <div class="header-title">
+            <h1>Manage Employee</h1>
+            <small></small>
+        </div>
+    </section>
+
+    <!-- Main content -->
+    <!--profile componenent-->
+    <!-- Main content -->
+    <div class="content">
+        <div class="row">
+            <!--  table area -->
+            <div class="col-sm-12">
+
+                <div class="panel panel-default thumbnail">
+
+                    <div class="panel-body table-responsive">
+                        <table width="100%" class="datatable table table-striped table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>SL No</th>
+                                <th>Photograph</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>User Id</th>
+                                <th>Date of Birth</th>
+                                <th>Date of E</th>
+                                <th>Phone</th>
+                                <th>Contact</th>
+                                <th>Email Address</th>
+                                <th>Current Address</th>
+                                <th>Perment Address</th>
+                                <th>Blood</th>
+                                <th>Position</th>
+                                <th>Salary Model</th>
+                                <th>Leave Model</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr *ngFor="let employee of employees" class="odd gradeX">
+                                <td>1</td>
+                                <td><img src="http://newhrm.bdtask.com/hrm_demo/./application/modules/employee/assets/images/2018-11-11/f.png" alt="Image" height="64" ></td>
+                                <td>{{employee.fName}}</td>
+                                <td>{{employee.lName}}</td>
+                                <td>{{employee.userId}}</td>
+                                <td>{{employee.dob}}</td>
+                                <td>{{employee.doe}}</td>
+                                <td>{{employee.phone}}</td>
+                                <td>0{{employee.mobile}}</td>
+                                <td>{{employee.email}}</td>
+                                <td>{{employee.curAddress}}</td>
+                                <td>{{employee.perAddress}}</td>
+                                <td>{{employee.blood}}</td>
+                                <td>Manage</td>
+                                <td>{{employee.salaryModel.mName}}</td>
+                                <td>{{employee.leaveModel.mName}}</td>
+                                <td *ngIf="employee.active">Active</td>
+                                <td *ngIf="!employee.active">Deactive</td>
+
+
+                             <td class="center">
+                                    <a  class="btn btn-xs btn-success"><i class="fa fa-pencil"></i></a>
+                                    <button routerLink="/employees" class="btn btn-xs btn-danger" (click)="delete(employee.eId)"><i class="fa fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>  <!-- /.table-responsive -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- /.content -->
+
+    <!--End profile component-->
+<!-- Start Page Lavel Plugins
+=====================================================================-->
+
+
+
+</div> <!-- /.content -->

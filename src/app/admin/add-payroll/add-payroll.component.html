@@ -1,0 +1,89 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="header-icon"><i class="fa fa-credit-card"></i></div>
+        <div class="header-title">
+            <h1>Add Payroll</h1>
+            <small></small>
+        </div>
+    </section>
+
+
+    <!-- Main content -->
+    <!--profile componenent-->
+    <div class="content">
+        <!-- load messages -->
+        <!-- load custom page -->
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="panel panel-bd lobidrag">
+                    <div class="" style="padding: 0px 20px;">
+                        <div class="panel-title">
+                            <h4>Add Payroll</h4>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+
+
+                        <form #f="ngForm" (ngSubmit)="onsubmit(f)" enctype="multipart/form-data"  accept-charset="utf-8">
+
+
+                            <!-- <input type="hidden" name="id" value="2" /> -->
+
+                            <div class="form-group row">
+                                <label for="salryModel" class="col-sm-3 col-form-label">Salary Model Name*</label>
+                                <div class="col-sm-9">
+                                    <input ngModel name="mName" #salryModel="ngModel" required class="form-control" type="text" placeholder="Type Salary Model Name" id="salryModel"  value="">
+                                    <div class="alert alert-danger" *ngIf="salryModel.touched && !salryModel.valid">
+                                     <div *ngIf="salryModel.errors.required">Field is required</div>
+                                  </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
+                                <label for="fullDay" class="col-sm-3 col-form-label">Full Day Salary* </label>
+                                <div class="col-sm-9">
+                                    <input ngModel name="fullAmount" #fullDay="ngModel" required type="text" placeholder="Full Day Salary Amount" class="form-control" id="fullDay" />
+                                    <div class="alert alert-danger" *ngIf="fullDay.touched && !fullDay.valid">
+                                        <div *ngIf="fullDay.errors.required">Field is required</div>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="halfDay" class="col-sm-3 col-form-label">Half Day Salary* </label>
+                                <div class="col-sm-9">
+                                    <input tarea ngModel name="halfAmount" #halfDay="ngModel" required type="text" placeholder="Half Day Salary Amount" class="form-control" id="halfDay"/>
+                                    <div class="alert alert-danger" *ngIf="halfDay.touched && !halfDay.valid">
+                                        <div *ngIf="halfDay.errors.required">Field is required</div>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="description" class="col-sm-3 col-form-label">Description* </label>
+                                <div class="col-sm-9">
+                                    <input ngModel name="description" type="text" #description="ngModel" required placeholder="Description" class="form-control" id="description"/>
+                                    <div class="alert alert-danger" *ngIf="description.touched && !description.valid">
+                                        <div *ngIf="description.errors.required">Field is required</div>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="form-group text-right">
+                                <button type="submit" class="btn btn-success w-md m-b-5">Save</button>
+                                <button type="reset" class="btn btn-primary w-md m-b-5">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- /.content -->
+    <!--End profile component-->
+<!-- Start Page Lavel Plugins
+=====================================================================-->
+
+
+
+</div> <!-- /.content -->

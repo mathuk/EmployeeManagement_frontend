@@ -1,0 +1,114 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="header-icon"><i class="fa fa-users"></i></div>
+        <div class="header-title">
+            <h1>Add Leave request</h1>
+            <small></small>
+        </div>
+    </section>
+
+
+    <!-- Main content -->
+    <!--profile componenent-->
+    <div class="content">
+        <!-- load messages -->
+        <!-- load custom page -->
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="panel panel-bd lobidrag">
+                    <div class="" style="padding: 0px 20px;">
+                        <div class="panel-title">
+                            <h4>Add Leave request</h4>
+                        </div>
+                    </div>
+
+                <div class="panel-body">
+
+
+                      <form #f="ngForm" (ngSubmit)="onsubmit(f)" enctype="multipart/form-data"  accept-charset="utf-8">
+
+
+                          <!-- <input type="hidden" name="id" value="2" /> -->
+                          <div class="form-group row">
+                                <label for="reason" class="col-sm-3 col-form-label">Reason *</label>
+                                <div class="col-sm-9">
+                                    <input ngModel name="reason" #reason="ngModel" required class="form-control" type="text" placeholder="Reason" id="reason"  >
+                                    <div class="alert alert-danger" *ngIf="reason.touched && !reason.valid">
+                                        <div *ngIf="reason.errors.required">Field is required</div>
+                                     </div>
+                                </div>
+                            </div>
+
+                            
+
+                            <div class="form-group row">
+                                <label for="date" class="col-sm-3 col-form-label">Dates *</label>
+                                <div class="col-sm-9">
+                                    <input ngModel name="date" #date="ngModel" required class="form-control" type="date" placeholder="Dates" id="date"  value="">
+                                    <div class="alert alert-danger" *ngIf="date.touched && !date.valid">
+                                        <div *ngIf="date.errors.required">Field is required</div>
+                                     </div>
+                                </div>
+                            </div>
+
+                          <div class="form-group text-right">
+                              <button type="submit" [disabled]="!f.valid" class="btn btn-success w-md m-b-5">Save</button>
+                              <button type="reset" class="btn btn-primary w-md m-b-5">Reset</button>
+                          </div>
+                      </form>
+                  </div>
+                </div>
+            </div>
+
+               <!--  table area -->
+               <div class="col-sm-12">
+
+                <div class="panel panel-default thumbnail">
+
+                    <div class="panel-body table-responsive">
+                        <table width="100%" class="datatable table table-striped table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>SL No</th>
+                                <th>Requested Date</th>
+                                <th>Date</th>
+                                <th>Reason</th>
+                                <th>Checked</th>
+                                <th>Approval</th>
+                                <th>Reply</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr *ngFor="let request of requests" class="odd gradeX">
+                                <td>1</td>
+                                <td>{{request.requestedDate}}</td>
+                                <td>{{request.date}}</td>
+                                <td>{{request.reason}}</td>
+                                <td>{{request.checked}}</td>
+                                <td>{{request.approved}}</td>
+                                <td>{{request.reply}}</td>
+                                
+
+
+                             <td class="center">
+                                    <button routerLink="/employees" class="btn btn-xs btn-danger" (click)="delete(employee.eId)"><i class="fa fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>  <!-- /.table-responsive -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- /.content -->
+    <!--End profile component-->
+<!-- Start Page Lavel Plugins
+=====================================================================-->
+
+
+
+</div> <!-- /.content -->

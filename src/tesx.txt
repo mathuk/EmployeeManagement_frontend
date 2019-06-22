@@ -1,0 +1,86 @@
+localhost:8080/manager/add-task
+
+{
+	"employess":[{"eId":"9"},{"eId":"10"}],
+	"description":"Sample",
+	"deadLine":"29-JANUARY-2019",
+	"createdBy":{"eId":"9"}
+	
+}
+
+{
+	"requestedBy":{"eId":"10"},
+	"dates":["2019-01-20","2019-01-21"],
+	"reason":"Medical purpose",
+	"checked":"false"
+	
+}
+
+{
+	"requestedBy":{"eId":"10"},
+	"date":"2019-02-20",
+	"reason":"Medical purpose",
+	"checked":"false"
+	
+}
+
+http://localhost:8080/manager/my-reply?id=Arumugam201
+
+http://localhost:8080/manager/requests
+
+
+ {
+        "requestId": 3,
+        "requestedBy": {
+            "eId": 10,
+            "fName": "hfhdf",
+            "lName": "ffaw",
+            "dob": "2019-01-10",
+            "gender": "M",
+            "doe": "2019-01-27",
+            "email": "thiyaneng@gmail.com",
+            "mobile": "aMmask",
+            "phone": "a",
+            "curAddress": "ask",
+            "perAddress": "aSF",
+            "blood": "A-",
+            "position": "Manager",
+            "userId": "ffaw4241",
+            "password": "$2a$10$zHXtP76SRxjbWSBEp/yJEeF8a/D.psPsEvHGN7dJJX34xEgydpqHa",
+            "image": "",
+            "roles": [
+                {
+                    "rId": 1,
+                    "role": "EMPLOYEE"
+                }
+            ],
+            "salaryModel": {
+                "sId": 13,
+                "mName": "Test10000",
+                "fullAmount": "435435",
+                "halfAmount": "678",
+                "description": "jakhd",
+                "valid": true
+            },
+            "leaveModel": {
+                "lId": 10,
+                "mName": "Test10000",
+                "daysPerYear": 7,
+                "daysPerMonth": 4,
+                "description": "jmaschjk",
+                "valid": true
+            },
+            "active": true,
+            "handler": {},
+            "hibernateLazyInitializer": {}
+        },
+        "requestedDate": "2019-02-05 09:42",
+        "date": "2019-02-20",
+        "reason": "Medical purpose",
+        "checked": false,
+        "approvedBy": {"eId":9},
+        "approved": true,
+        "days": 0,
+        "reply": "Ok",
+        "valid": true
+    }

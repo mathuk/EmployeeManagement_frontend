@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>EmployeeManagement</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+
+      <!-- Start Global Mandatory Style -->
+    <!-- jquery-ui css -->
+    <link href="assets/css/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Bootstrap rtl -->
+
+    <!-- Lobipanel css -->
+    <link href="assets/css/lobipanel.min.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Pace css -->
+    <link href="assets/css/flash.css" rel="stylesheet" type="text/css"/>
+    <!-- Font Awesome -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <!-- Pe-icon -->
+    <!--    <link href="css/pe-icon-7-stroke.css" rel="stylesheet" type="text/css"/>-->
+    <!-- Themify icons -->
+    <link href="assets/css/themify-icons.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Material Icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- select2.min -->
+    <link href="assets/css/select2.min.css" rel="stylesheet" type="text/css"/>
+    <!-- timepicker -->
+    <link href="assets/css/jquery-ui-timepicker-addon.min.css" rel="stylesheet"
+          type="text/css"/>
+    <!-- datatable -->
+    <link href="assets/css/dataTables.min.css" rel="stylesheet"
+          type="text/css"/>
+    <!-- End Global Mandatory Style-->
+
+     <!-- Theme style -->
+     <link href="assets/css/daterangepicker.css" rel="stylesheet" type="text/css"/>
+     <!-- Date range style -->
+     <!-- <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/> -->
+ 
+     <!--<link href="http://newhrm.bdtask.com/hrm_demo/assets/css/bootstrap-timepicker.min.css" rel="stylesheet"-->
+           <!--type="text/css"/>-->
+     <link href="assets/css/styleBD.css" rel="stylesheet" type="text/css"/>
+
+     <!-- jQuery -->
+    <script src="assets/css/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="assets/css/bootstrap-timepicker.min.js" type="text/javascript"></script>
+
+    <script src="assets/css/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      function signoutmodal(id,signin){
+          $("#signout").modal('show');
+          document.getElementById('att_id').value=id;
+          document.getElementById('sign_in').value=signin;
+      }
+
+      $(document).ready(function() {
+
+// choose text for the show/hide link - can contain HTML (e.g. an image)
+          var showText='ADD More';
+          var hideText='Hide';
+
+// initialise the visibility check
+          var is_visible = false;
+
+// append show/hide links to the element directly preceding the element with a class of "toggle"
+          $('.toggle').prev().append(' (<a href="#" class="toggleLink">'+showText+'</a>)');
+
+// hide all of the elements with a class of 'toggle'
+          $('.toggle').hide();
+
+// capture clicks on the toggle links
+          $('a.toggleLink').click(function() {
+
+// switch visibility
+              is_visible = !is_visible;
+
+// change the link depending on whether the element is shown or hidden
+              $(this).html( (!is_visible) ? showText : hideText);
+
+// toggle the display - uncomment the next line for a basic "accordion" style
+//$('.toggle').hide();$('a.toggleLink').html(showText);
+              $(this).parent().next('.toggle').toggle('slow');
+
+// return false so any link destination is not followed
+              return false;
+
+          });
+      });
+  </script>
+  <script>
+      function checkTime(i) {
+          if (i < 10) {
+              i = "0" + i;
+          }
+          return i;
+      }
+
+      function startTime() {
+          // var today = new Date();
+          // today.setTimezone("Asia/Jakarta");
+          var indianTimeZoneVal = new Date().toLocaleString('en-US', {timeZone: "Asia/Dhaka"});
+          var today = new Date(indianTimeZoneVal);
+          var h = today.getHours();
+          var m = today.getMinutes();
+          var s = today.getSeconds();
+          var ap = "AM";
+          if (h   > 11) { ap = "PM";             }
+          if (h   > 12) { h = h - 12;      }
+          if (h   == 0) { h = 12;             }
+          if (h   < 10) { h   = "0" + h;   }
+          if (m < 10) { m = "0" + m; }
+          if (s < 10) { s = s; }
+
+          // add a zero in front of numbers<10
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('clock').innerHTML = h + ":" + m + ":" + s + " " + ap;
+          t = setTimeout(function() {
+              startTime()
+          }, 500);
+      }
+      startTime();
+  </script>
+</head>
+<body  class="hold-transition sidebar-mini">
+  
+  <app-root></app-root>
+
+
+
+
+<!-- Start Core Plugins-->
+
+<!-- jquery-ui -->
+<script src="assets/js/jquery-ui.min.js" type="text/javascript"></script>
+<!-- Bootstrap -->
+
+<!-- lobipanel -->
+<script src="assets/js/lobipanel.min.js" type="text/javascript"></script>
+<!-- Pace js -->
+<!--<script src="http://newhrm.bdtask.com/hrm_demo/assets/js/pace.min.js" type="text/javascript"></script>-->
+<!-- SlimScroll -->
+<script src="assets/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+<!-- FastClick -->
+<script src="assets/js/fastclick.min.js" type="text/javascript"></script>
+<!-- Select2 -->
+<script src="assets/js/select2.min.js" type="text/javascript"></script>
+<!-- bootstrap timepicker -->
+<script src="assets/js/jquery-ui-sliderAccess.js" type="text/javascript"></script>
+<script src="assets/js/jquery-ui-timepicker-addon.min.js"
+        type="text/javascript"></script>
+<!-- tinymce js -->
+<script src="assets/js/tinymce.min.js" type="text/javascript"></script>
+<!-- dataTables js -->
+<script src="assets/js/dataTables.min.js" type="text/javascript"></script>
+<!-- Date range js -->
+<script src="assets/js/daterangepicker.js" type="text/javascript"></script>
+
+<script type="text/javascript"
+    src="assets/css/jquery-1.7.2.min.js"></script>
+
+<!-- AdminBD frame -->
+<script src="assets/js/frame.js" type="text/javascript"></script>
+<!-- End Core Plugins -->
+<!-- Start Page Lavel Plugins
+       =====================================================================-->
+<!-- Counter js -->
+<!--  <script src="assets/plugins/counterup/waypoints.js" type="text/javascript"></script>
+ <script src="assets/plugins/counterup/jquery.counterup.min.js" type="text/javascript"></script> -->
+<!-- Sparklines js -->
+<!--   <script src="assets/plugins/sparkline/sparkline.min.js" type="text/javascript"></script> -->
+<!-- End Page Lavel Plugins
+=====================================================================-->
+<!-- Dashboard js -->
+<script src="assets/js/dashboard.js" type="text/javascript"></script>
+<!-- End Theme label Script-->
+
+
+</body>
+</html>

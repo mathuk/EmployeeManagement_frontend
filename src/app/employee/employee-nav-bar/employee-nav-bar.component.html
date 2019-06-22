@@ -1,0 +1,201 @@
+<header class="main-header">
+  <a href="index.html" class="logo">
+<span class="logo-lg">
+  <img src="assets/images/icon/HRM.png" alt="">
+</span>
+  </a>
+  <div class="se-pre-con"></div>
+  <!-- Header Navbar -->
+  <nav class="navbar navbar-static-top">
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"> <!-- Sidebar toggle button-->
+          <span class="fa fa-navicon"></span>
+      </a>
+      <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+              <li class="dropdown dropdown-user">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-cogs"></i></a>
+                  <ul class="dropdown-menu">
+                      <li><a routerLink="/settings"><i
+                              class="fa fa-cog"></i> Setting</a></li>
+                      <li><button (click)="logout()"><i class="fa fa-sign-out"></i> Logout</button>
+                      </li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+  </nav>
+</header>
+
+
+<!-- Left side column. contains the sidebar -->
+<aside class="main-sidebar">
+  <!-- sidebar -->
+
+  <div class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel text-center">
+          <div class="image">
+              <img src="assets/images/icon/profile_img1.png" class="img-circle"
+                   alt="User Image">
+          </div>
+          <div class="info">
+              <p>{{name}}</p>
+              <a href="#"><i class="fa fa-circle text-success"></i> Employee</a>
+          </div>
+      </div>
+
+
+      <!-- sidebar menu -->
+      <ul class="sidebar-menu">
+
+
+          <!-- *************************************
+          **********STATS OF CUSTOM MODULES*********
+          ************************************* -->
+
+
+
+          <li class="treeview ">
+
+              <a href="javascript:void(0)">
+                  <i class='fa fa-users'></i> <span>Attendence</span>
+                  <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+              </a>
+              <ul class="treeview-menu">
+                  <!-- endforeach -->
+
+                  <!-- endforeach -->
+
+                  <!-- single level menu/link -->
+                  <li class="">
+                      <a routerLink="my-attendance">My Attendence</a>
+                  </li>
+
+                  <!-- endforeach -->
+              </ul>
+          </li>
+          <!-- end if -->
+          <!-- end foreach -->
+
+          <li class="treeview ">
+
+              <a href="javascript:void(0)">
+                  <i class='fa fa-plane' aria-hidden='true'></i> <span>Leave</span>
+                  <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+              </a>
+
+              <ul class="treeview-menu">
+                  <!-- endforeach -->
+
+                  <!-- single level menu/link -->
+                  <li class="">
+                      <a routerLink="/leave-request">Leave Request</a>
+                  </li>
+
+                  <!-- endforeach -->
+
+
+              </ul>
+          </li>
+          <!-- end if -->
+          <!-- end foreach -->
+
+
+          <li class="treeview ">
+
+              <a href="javascript:void(0)">
+                  <i class='fa fa-bell-o' aria-hidden='true'></i>
+                  <span>Notice Board</span>
+                  <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+              </a>
+
+              <ul class="treeview-menu">
+                  <!-- endforeach -->
+
+                  <!-- single level menu/link -->
+                  <!-- <li class="">
+                      <a routerLink="/new-notice">Add Notice</a>
+                  </li> -->
+
+                  <!-- endforeach -->
+
+                  <!-- single level menu/link -->
+                  <li class="">
+                      <a routerLink="/notices">Notices</a>
+                  </li>
+
+                  <!-- endforeach -->
+              </ul>
+          </li>
+          <!-- end if -->
+          <!-- end foreach -->
+
+          <li class="treeview ">
+
+              <a href="javascript:void(0)">
+                  <i class='fa fa-credit-card'></i> <span>Payroll</span>
+                  <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+              </a>
+
+              <ul class="treeview-menu">
+                  <!-- endforeach -->
+
+                  <!-- single level menu/link -->
+                  <li class="">
+                      <a routerLink="/my-salary">My Payroll</a>
+                  </li>
+
+                  <!-- endforeach -->
+
+                  <!-- single level menu/link -->
+                  <!-- <li class="">
+                      <a routerLink="/payrolls">Manage Payroll</a>
+                  </li> -->
+
+                  <!-- endforeach -->
+              </ul>
+          </li>
+          <!-- end if -->
+          <!-- end foreach -->
+
+          <li class="treeview ">
+
+              <a href="javascript:void(0)">
+                  <i class='fa fa-credit-card'></i> <span>Task</span>
+                  <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+              </a>
+
+              <ul class="treeview-menu">
+                  <!-- endforeach -->
+
+                  <!-- single level menu/link -->
+                  <li class="">
+                      <a routerLink="/my-task">My Task</a>
+                  </li>
+
+                  <!-- endforeach -->
+
+                  <!-- single level menu/link -->
+                  <!-- <li class="">
+                      <a routerLink="/roles">Manage Role</a>
+                  </li> -->
+
+                  <!-- endforeach -->
+              </ul>
+          </li>
+      </ul>
+  </div> <!-- /.sidebar -->            
+</aside>
+
+
+
